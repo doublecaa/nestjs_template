@@ -71,3 +71,14 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+
+## run sql server using docker + azure data
+- download docker desktop + azure data studio
+- create database: open terminal=> sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=Password.1' -p 1433:1433 --name azuresqledge -d mcr.microsoft.com/azure-sql-edge
+- open azure data studio => create connection => server: localhost | username: sa | password: Password.1
+- on new query => create database RongVietInvestDB
+- create data => open terminal(project) => yarn seed
+- run project: yarn start
+- swagger: localhost:3000/swagger
